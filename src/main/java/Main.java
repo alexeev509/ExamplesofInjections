@@ -12,14 +12,19 @@ public class Main {
         Address address1 = applicationContext.getBean(Address.class);
         System.out.println(address1);
 
-        House house = applicationContext.getBean(House.class);
-        System.out.println(house);
-        Address address2=house.getAddress();
+        House house1 = applicationContext.getBean(House.class);
+        System.out.println(house1);
+        Address address2 = house1.getAddress();
 
         //True because this is singlton and we have 1 reference
         System.out.println(address1==address2);
 
 
         ApplicationContext applicationContext1=new ClassPathXmlApplicationContext("config.xml");
+        Address address3 = applicationContext1.getBean(Address.class);
+        System.out.println(address3);
+        House house2 = applicationContext1.getBean(House.class);
+        System.out.println(house2);
+
     }
 }

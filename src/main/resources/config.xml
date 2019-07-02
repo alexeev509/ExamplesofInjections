@@ -3,4 +3,14 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <beans>
+        <bean class="beans.House">
+            <constructor-arg index="0" ref="address"/>
+            <constructor-arg index="1" value="66"/>
+        </bean>
+        <bean class="beans.Address" name="address">
+            <constructor-arg index="0" value="Nevskii"/>
+            <constructor-arg index="1" value="55"/>
+        </bean>
+    </beans>
 </beans>
