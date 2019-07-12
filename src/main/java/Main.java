@@ -1,4 +1,5 @@
 import beans.Address;
+import beans.CarProtypeExample;
 import beans.House;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -25,6 +26,12 @@ public class Main {
         System.out.println(address3);
         House house2 = applicationContext1.getBean(House.class);
         System.out.println(house2);
+
+
+        //Example of scope pototype
+        CarProtypeExample car1 = applicationContext.getBean(CarProtypeExample.class);
+        CarProtypeExample car2 = applicationContext.getBean(CarProtypeExample.class);
+        System.out.println(car1 == car2);
 
     }
 }
