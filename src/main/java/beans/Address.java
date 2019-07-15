@@ -9,6 +9,7 @@ public class Address {
 
     private Integer numberOfTheHouse;
 
+    //Address ad=new Address("toreza",45);
     public Address(@Value("Toreza") String nameOfTheStreet,
                    @Value("45") Integer numberOfTheHouse) {
         this.nameOfTheStreet = nameOfTheStreet;
