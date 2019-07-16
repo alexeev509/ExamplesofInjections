@@ -39,7 +39,7 @@ public class Main {
         CarProtypeExample car2 = applicationContext.getBean(CarProtypeExample.class);
         System.out.println(car1 == car2);
 
-        //we dont have in context bean LazyBone
+        //we dont have in context bean LazyBone (we dont see postconstruct)
         //But if i will try to get it - context will create this bean!
         LazyBone lazyBone = applicationContext.getBean(LazyBone.class);
 
